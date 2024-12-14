@@ -1,23 +1,24 @@
 {
   "schemaVersion": 1,
-  "id": "durabilityplus",
-  "version": "1.1.0",
-  "name": "DurabilityPlus",
+  "id": "rmes-durabilityplus",
+  "version": "1.0.0",
+  "name": "RME's DurabilityPlus",
   "description": "Simple durability tooltips.",
   "authors": [
+    "RME",
     "ddeeddii"
   ],
   "contact": {
     "homepage": "https://modrinth.com/mod/durability-plus/",
-    "sources": "https://github.com/ddeeddii/DurabilityPlus",
-    "issues": "https://github.com/ddeeddii/DurabilityPlus/issues"
+    "sources": "https://github.com/RubenRME/DurabilityPlus",
+    "issues": "https://github.com/RubenRME/DurabilityPlus/issues"
   },
   "license": "MIT",
-  "icon": "assets/durabilityplus/icon.png",
-  "environment": "*",
+  "icon": "assets/rmes-durabilityplus/icon.png",
+  "environment": "client",
   "entrypoints": {
     "client": [
-      "com.ddeeddii.durabilityplus.DurabilityPlusClient"
+      "gg.rme.durabilityplus.DurabilityPlusClient"
     ]
   },
   "depends": {
@@ -25,12 +26,15 @@
     "fabric": "*",
     "minecraft": ">=1.20.5"
   },
+  "conflicts": {
+    "durabilityplus": "*"
+  },
   "custom": {
     "modmenu": {
-      "id": "com.ddeeddii.durabilityplus",
+      "id": "gg.rme.durabilityplus",
       "name": "Durability Plus",
       "description": "Adds simple and minimal durability tooltips",
-      "icon": "assets/durabilityplus/icon.png"
+      "icon": "assets/rmes-durabilityplus/icon.png"
     }
   }
 }

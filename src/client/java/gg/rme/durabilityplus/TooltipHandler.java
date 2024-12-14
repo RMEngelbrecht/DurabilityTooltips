@@ -1,4 +1,4 @@
-package com.ddeeddii.durabilityplus;
+package gg.rme.durabilityplus;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.MutableText;
@@ -11,9 +11,10 @@ public class TooltipHandler {
             return Formatting.GREEN;
         } else if(maxDurability * 0.33f <= currentDurability){
             return Formatting.YELLOW;
+        } else if (currentDurability > 0) {
+            return Formatting.RED;
         }
-
-        return Formatting.RED;
+        return Formatting.DARK_GRAY;
     }
 
     public static Text GetTooltip(ItemStack stack){
