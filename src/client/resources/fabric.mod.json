@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "rmes-durabilityplus",
   "version": "1.0.0",
-  "name": "RME's DurabilityPlus",
+  "name": "RME's Durability Plus",
   "description": "Simple durability tooltips.",
   "authors": [
     "RME",
