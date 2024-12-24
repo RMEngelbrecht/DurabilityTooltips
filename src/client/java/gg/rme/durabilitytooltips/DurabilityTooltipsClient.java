@@ -1,4 +1,4 @@
-package gg.rme.durabilityplus;
+package gg.rme.durabilitytooltips;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;

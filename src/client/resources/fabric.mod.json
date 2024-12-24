@@ -1,47 +1,47 @@
 {
   "schemaVersion": 1,
-  "id": "rmes-durabilityplus",
-  "version": "1.0.0",
-  "name": "RME's Durability Plus",
-  "description": "Simple durability tooltips.",
+  "id": "rmes-durability-tooltips",
+  "version": "2.0.0",
+  "name": "RME's Durability Tooltips",
+  "description": "Simple and customisable durability tooltips.",
   "authors": [
     "RME",
     "ddeeddii"
   ],
   "contact": {
-    "homepage": "https://modrinth.com/mod/rmes-durability-plus/",
-    "sources": "https://github.com/RubenRME/DurabilityPlus",
-    "issues": "https://github.com/RubenRME/DurabilityPlus/issues"
+    "homepage": "https://modrinth.com/mod/rmes-durability-tooltips/",
+    "sources": "https://github.com/RubenRME/DurabilityTooltips",
+    "issues": "https://github.com/RubenRME/DurabilityTooltips/issues"
   },
   "license": "MIT",
-  "icon": "assets/rmes-durabilityplus/icon.png",
+  "icon": "assets/rmes-durabilitytooltips/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "gg.rme.durabilityplus.DurabilityPlusClient"
+      "gg.rme.durabilitytooltips.DurabilityTooltipsClient"
     ],
     "modmenu": [
-      "gg.rme.durabilityplus.config.ModMenuIntegration"
+      "gg.rme.durabilitytooltips.config.ModMenuIntegration"
     ]
   },
   "depends": {
     "fabricloader": ">=0.15",
     "fabric": "*",
-    "minecraft": ">=1.20.5"
+    "minecraft": ">=1.20.6 <=1.21.4"
   },
   "suggests": {
     "modmenu": ">=7.2.1",
     "cloth-config": ">=11.1.106"
   },
   "conflicts": {
-    "durabilityplus": "*"
+    "durability-tooltips": "*"
   },
   "custom": {
     "modmenu": {
-      "id": "gg.rme.durabilityplus",
-      "name": "Durability Plus",
-      "description": "Adds simple and minimal durability tooltips",
-      "icon": "assets/rmes-durabilityplus/icon.png"
+      "id": "gg.rme.durabilitytooltips",
+      "name": "RME's Durability Tooltips",
+      "description": "Adds simple and configurable durability tooltips",
+      "icon": "assets/rmes-durabilitytooltips/icon.png"
     }
   }
 }
