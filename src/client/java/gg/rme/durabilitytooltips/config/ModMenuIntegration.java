@@ -8,7 +8,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class ModMenuIntegration implements ModMenuApi {
-    public static final Logger LOGGER = LogManager.getLogger("RME's Durability Tooltips/Config");
 
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
