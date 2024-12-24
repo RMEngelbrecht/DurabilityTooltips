@@ -23,13 +23,15 @@ public class DurabilityTooltipsClient implements ClientModInitializer {
         ModConfig config = ModConfig.getInstance();
 
         ItemTooltipCallback.EVENT.register((ItemStack stack, Item.TooltipContext context, TooltipType type, List<Text> lines) -> {
-            if (!type.isAdvanced()) {
-                if (stack.getMaxDamage() == 0 || !stack.isDamaged()) {
+            if (!type.isAdvanced() && config.isTooltipEnabled()) {
+                if (stack.getMaxDamage() == 0
+                        || (!config.isTooltipEnabledWhenEmpty() && stack.getMaxDamage() - stack.getDamage() <= 0)
+                        || (!config.isTooltipEnabledWhenFull() && !stack.isDamaged())) {
                     return;
                 }
 
                 lines.add(Text.empty());
-                lines.add(TooltipHandler.GetTooltip(stack));
+                lines.add(TooltipHandler.getTooltip(stack));
             }
         });
 
