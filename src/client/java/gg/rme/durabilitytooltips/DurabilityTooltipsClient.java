@@ -12,8 +12,8 @@ import gg.rme.durabilitytooltips.config.ModConfig;
 
 import java.util.List;
 
-public class DurabilityPlusClient implements ClientModInitializer {
-    public static final Logger LOGGER = LogManager.getLogger("rmes-durabilityplus");
+public class DurabilityTooltipsClient implements ClientModInitializer {
+    public static final Logger LOGGER = LogManager.getLogger("RME's Durability Tooltips");
 
     @Override
     public void onInitializeClient() {
@@ -33,6 +33,6 @@ public class DurabilityPlusClient implements ClientModInitializer {
             }
         });
 
-        LOGGER.info("[RME's DurabilityPlus] Mod loaded!");
+        LOGGER.info("[RME's Durability Tooltips] Mod loaded!");
     }
 }
