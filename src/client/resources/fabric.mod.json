@@ -5,7 +5,9 @@
   "name": "RME's Durability Tooltips",
   "description": "Simple and customisable durability tooltips.",
   "authors": [
-    "RME",
+    "RME"
+  ],
+  "contributors": [
     "ddeeddii"
   ],
   "contact": {
