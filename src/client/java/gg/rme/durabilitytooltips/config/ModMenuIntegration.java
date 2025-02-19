@@ -4,17 +4,18 @@ import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.text.Text;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class ModMenuIntegration implements ModMenuApi {
 
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        if (!FabricLoader.getInstance().isModLoaded("cloth-config")) {
-            return parent -> new InformationScreen(parent, Text.translatable("title.rmes-durability-tooltips.config"));
+        if (FabricLoader.getInstance().isModLoaded("yet_another_config_lib_v3")) {
+            return new YACLConfigScreen().create();
+        } else if (FabricLoader.getInstance().isModLoaded("cloth-config")) {
+            return new ClothConfigScreen().create();
         }
-        return new ClothConfigScreen().create();
+
+        return parent -> new InformationScreen(parent, Text.translatable("title.rmes-durability-tooltips.config"));
     }
 
 }

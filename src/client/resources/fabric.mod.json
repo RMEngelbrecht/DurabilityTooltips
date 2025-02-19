@@ -31,7 +31,7 @@
   },
   "suggests": {
     "modmenu": ">=7.2.1",
-    "cloth-config": ">=11.1.106"
+    "yet_another_config_lib_v3": ">=3.6.1"
   },
   "conflicts": {
     "durability-tooltips": "*"
