@@ -22,7 +22,7 @@
   "config.rmes-durability-tooltips.colours.max_durability_colour.desc": "This is the colour of the max durability.\nA.k.a. the number on the right of the separator.",
   "config.rmes-durability-tooltips.colours.separator_colour": "Separator colour",
   "config.rmes-durability-tooltips.colours.separator_colour.desc": "The colour of the separator: ",
-  "config.rmes-durability-tooltips.cloth_config_missing.description": "You need Cloth Config API for visual configuration of the config, but it's missing!\nYou can click the button below to open the config file in your system's editor.",
-  "config.rmes-durability-tooltips.cloth_config_missing.button.open": "Open Config",
-  "config.rmes-durability-tooltips.cloth_config_missing.button.back": "Back"
+  "config.rmes-durability-tooltips.api_missing.description": "You need YACL or Cloth Config for visual configuration of the config, but both are missing!\nYou can click the button below to open the config file in your system's editor.",
+  "config.rmes-durability-tooltips.api_missing.button.open": "Open Config",
+  "config.rmes-durability-tooltips.api_missing.button.back": "Back"
 }

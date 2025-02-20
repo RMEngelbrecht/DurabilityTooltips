@@ -47,15 +47,15 @@ public class InformationScreen extends Screen {
 
         context.drawCenteredTextWithShadow(textRenderer, title, width / 2, 15, 0xFFFFFF);
 
-        final String clothConfigMissingKey = "config.rmes-durability-tooltips.cloth_config_missing.description";
+        final String apiMissingKey = "config.rmes-durability-tooltips.api_missing.description";
 
         try {
-            final MultilineText multilineText = MultilineText.create(textRenderer, Text.translatable(clothConfigMissingKey), width - 50);
+            final MultilineText multilineText = MultilineText.create(textRenderer, Text.translatable(apiMissingKey), width - 50);
 
             multilineText.drawCenterWithShadow(context, width / 2, height / 2);
 
         } catch (NoSuchMethodError e) {
-            List<OrderedText> wrappedText = textRenderer.wrapLines(Text.translatable(clothConfigMissingKey), width - 50);
+            List<OrderedText> wrappedText = textRenderer.wrapLines(Text.translatable(apiMissingKey), width - 50);
 
             int currentY = height / 2;
 
