@@ -28,11 +28,11 @@ public class InformationScreen extends Screen {
 
     @Override
     protected void init() {
-        buttonBack = ButtonWidget.builder(Text.translatable("config.rmes-durability-tooltips.cloth_config_missing.button.back"), button -> close())
+        buttonBack = ButtonWidget.builder(Text.translatable("config.rmes-durability-tooltips.api_missing.button.back"), button -> close())
                 .dimensions(width / 2 - 110, height - 30, 100, 20)
                 .build();
 
-        buttonConfig = ButtonWidget.builder(Text.translatable("config.rmes-durability-tooltips.cloth_config_missing.button.open"), button ->
+        buttonConfig = ButtonWidget.builder(Text.translatable("config.rmes-durability-tooltips.api_missing.button.open"), button ->
                         Util.getOperatingSystem().open(FabricLoader.getInstance().getConfigDir().resolve("rmes-durability-tooltips.json").toUri()))
                 .dimensions(width / 2 + 10, height - 30, 100, 20)
                 .build();
