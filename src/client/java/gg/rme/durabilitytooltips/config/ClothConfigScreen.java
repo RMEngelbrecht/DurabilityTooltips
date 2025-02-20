@@ -35,7 +35,7 @@ public class ClothConfigScreen {
                             Text.translatable("config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_full_durability"),
                             config.isTooltipEnabledWhenFull())
                     .setDefaultValue(false)
-                    .setTooltip(Text.translatable("config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_full_durability.tooltip"))
+                    .setTooltip(Text.translatable("config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_full_durability.desc"))
                     .setSaveConsumer(config::setTooltipEnabledWhenFull)
                     .build()
             );
@@ -44,7 +44,7 @@ public class ClothConfigScreen {
                             Text.translatable("config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_no_durability"),
                             config.isTooltipEnabledWhenEmpty())
                     .setDefaultValue(false)
-                    .setTooltip(Text.translatable("config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_no_durability.tooltip"))
+                    .setTooltip(Text.translatable("config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_no_durability.desc"))
                     .setSaveConsumer(config::setTooltipEnabledWhenEmpty)
                     .build()
             );
@@ -53,7 +53,7 @@ public class ClothConfigScreen {
                             Text.translatable("config.rmes-durability-tooltips.general.tooltip_separator"),
                             config.getTooltipSeparator())
                     .setDefaultValue(" / ")
-                    .setTooltip(Text.translatable("config.rmes-durability-tooltips.general.tooltip_separator.tooltip"))
+                    .setTooltip(Text.translatable("config.rmes-durability-tooltips.general.tooltip_separator.desc"))
                     .setSaveConsumer(config::setTooltipSeparator)
                     .build()
             );
@@ -84,42 +84,42 @@ public class ClothConfigScreen {
                                                     Text.translatable("config.rmes-durability-tooltips.colours.high_durability_colour"),
                                                     config.getTooltipHighColour())
                                             .setDefaultValue("GREEN")
-                                            .setTooltip(Text.translatable("config.rmes-durability-tooltips.colours.high_durability_colour.tooltip"))
+                                            .setTooltip(Text.translatable("config.rmes-durability-tooltips.colours.high_durability_colour.desc"))
                                             .setSaveConsumer(config::setTooltipHighColour)
                                             .build(),
                                     entryBuilder.startStrField(
                                                     Text.translatable("config.rmes-durability-tooltips.colours.medium_durability_colour"),
                                                     config.getTooltipMediumColour())
                                             .setDefaultValue("YELLOW")
-                                            .setTooltip(Text.translatable("config.rmes-durability-tooltips.colours.medium_durability_colour.tooltip"))
+                                            .setTooltip(Text.translatable("config.rmes-durability-tooltips.colours.medium_durability_colour.desc"))
                                             .setSaveConsumer(config::setTooltipMediumColour)
                                             .build(),
                                     entryBuilder.startStrField(
                                                     Text.translatable("config.rmes-durability-tooltips.colours.low_durability_colour"),
                                                     config.getTooltipLowColour())
                                             .setDefaultValue("RED")
-                                            .setTooltip(Text.translatable("config.rmes-durability-tooltips.colours.low_durability_colour.tooltip"))
+                                            .setTooltip(Text.translatable("config.rmes-durability-tooltips.colours.low_durability_colour.desc"))
                                             .setSaveConsumer(config::setTooltipLowColour)
                                             .build(),
                                     entryBuilder.startStrField(
                                                     Text.translatable("config.rmes-durability-tooltips.colours.no_durability_colour"),
                                                     config.getTooltipEmptyColour())
                                             .setDefaultValue("DARK_GRAY")
-                                            .setTooltip(Text.translatable("config.rmes-durability-tooltips.colours.no_durability_colour.tooltip"))
+                                            .setTooltip(Text.translatable("config.rmes-durability-tooltips.colours.no_durability_colour.desc"))
                                             .setSaveConsumer(config::setTooltipEmptyColour)
                                             .build(),
                                     entryBuilder.startStrField(
                                                     Text.translatable("config.rmes-durability-tooltips.colours.separator_colour"),
                                                     config.getTooltipSeparatorColour())
                                             .setDefaultValue("GRAY")
-                                            .setTooltip(Text.translatable("config.rmes-durability-tooltips.colours.separator_colour.tooltip").append(config.getTooltipSeparator()))
+                                            .setTooltip(Text.translatable("config.rmes-durability-tooltips.colours.separator_colour.desc").append(config.getTooltipSeparator()))
                                             .setSaveConsumer(config::setTooltipSeparatorColour)
                                             .build(),
                                     entryBuilder.startStrField(
                                                     Text.translatable("config.rmes-durability-tooltips.colours.max_durability_colour"),
                                                     config.getTooltipMaxDurabilityColour())
                                             .setDefaultValue("GRAY")
-                                            .setTooltip(Text.translatable("config.rmes-durability-tooltips.colours.max_durability_colour.tooltip"))
+                                            .setTooltip(Text.translatable("config.rmes-durability-tooltips.colours.max_durability_colour.desc"))
                                             .setSaveConsumer(config::setTooltipMaxDurabilityColour)
                                             .build()
                             )
