@@ -22,6 +22,9 @@ public class ModConfig {
     @SerializedName("tooltips_enabled")
     private boolean tooltipEnabled = true;
 
+    @SerializedName("only_while_key_is_pressed")
+    private boolean tooltipEnabledOnlyWhileKeyIsPressed = false;
+
     @SerializedName("enable_tooltip_when_item_has_full_durability")
     private boolean tooltipEnabledWhenFull = false;
 
@@ -95,6 +98,10 @@ public class ModConfig {
     public void setTooltipEnabled(boolean featureEnabled) {
         this.tooltipEnabled = featureEnabled;
     }
+
+    public boolean isTooltipEnabledOnlyWhileKeyIsPressed() { return this.tooltipEnabledOnlyWhileKeyIsPressed; }
+
+    public void setTooltipEnabledOnlyWhileKeyIsPressed(boolean featureEnabled) { this.tooltipEnabledOnlyWhileKeyIsPressed = featureEnabled; }
 
     public boolean isTooltipEnabledWhenFull() {
         return this.tooltipEnabledWhenFull;
