@@ -2,6 +2,8 @@
   "title.rmes-durability-tooltips.config": "Конфигурация RME's Durability Tooltips",
   "config.rmes-durability-tooltips.general": "Основные настройки",
   "config.rmes-durability-tooltips.general.tooltips_enabled": "Включить мод",
+  "config.rmes-durability-tooltips.general.tooltips_enabled_only_while_key_is_pressed": "Показывать прочность только при удерживании кнопки",
+  "config.rmes-durability-tooltips.general.tooltips_enabled_only_while_key_is_pressed.desc": "Включение этой опции позволит вам всегда видеть прочность предмета при удерживании кнопки. \n Две другие опции при этом будут отключены.",
   "config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_full_durability": "Показывать, когда предмет не повреждён",
   "config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_full_durability.desc": "Показывать ли прочность целого предмета.",
   "config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_no_durability": "Показывать, когда у предмета отсутствует прочность",
@@ -24,5 +26,6 @@
   "config.rmes-durability-tooltips.colours.separator_colour.desc": "Цвет разделителя: ",
   "config.rmes-durability-tooltips.api_missing.description": "Для визуальной настройки требуется YACL или Cloth Config, но оба мода отсутствуют!\nНажмите кнопку ниже, чтобы открыть файл конфигурации в редакторе.",
   "config.rmes-durability-tooltips.api_missing.button.open": "Открыть конфигурацию",
-  "config.rmes-durability-tooltips.api_missing.button.back": "Назад"
+  "config.rmes-durability-tooltips.api_missing.button.back": "Назад",
+  "key.rmes-durability-tooltips.show": "Показать Прочность Предмета"
 }

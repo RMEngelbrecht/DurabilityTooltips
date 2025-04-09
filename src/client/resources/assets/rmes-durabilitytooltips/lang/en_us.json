@@ -2,6 +2,8 @@
   "title.rmes-durability-tooltips.config": "RME's Durability Tooltips Config",
   "config.rmes-durability-tooltips.general": "General",
   "config.rmes-durability-tooltips.general.tooltips_enabled": "Enable Mod",
+  "config.rmes-durability-tooltips.general.tooltips_enabled_only_while_key_is_pressed": "Show durability only when button is held",
+  "config.rmes-durability-tooltips.general.tooltips_enabled_only_while_key_is_pressed.desc": "Enabling this option will allow you to always view an items durability by holding the button. \n The other two options thus get disabled.",
   "config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_full_durability": "Enable when item isn't damaged",
   "config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_full_durability.desc": "Whether or not to show durability when item durability is full.",
   "config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_no_durability": "Enable when item has no durability left",
@@ -24,5 +26,6 @@
   "config.rmes-durability-tooltips.colours.separator_colour.desc": "The color of the separator: ",
   "config.rmes-durability-tooltips.api_missing.description": "You need YACL or Cloth Config for visual configuration of the config, but both are missing!\nYou can click the button below to open the config file in your system's editor.",
   "config.rmes-durability-tooltips.api_missing.button.open": "Open Config",
-  "config.rmes-durability-tooltips.api_missing.button.back": "Back"
+  "config.rmes-durability-tooltips.api_missing.button.back": "Back",
+  "key.rmes-durability-tooltips.show": "Show Durability Of Item"
 }
