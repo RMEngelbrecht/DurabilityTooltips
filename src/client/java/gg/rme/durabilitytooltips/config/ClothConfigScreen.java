@@ -32,6 +32,15 @@ public class ClothConfigScreen {
             );
 
             general.addEntry(entryBuilder.startBooleanToggle(
+                            Text.translatable("config.rmes-durability-tooltips.general.tooltips_enabled_only_while_key_is_pressed"),
+                            config.isTooltipEnabledOnlyWhileKeyIsPressed())
+                    .setDefaultValue(false)
+                    .setTooltip(Text.translatable("config.rmes-durability-tooltips.general.tooltips_enabled_only_while_key_is_pressed.desc"))
+                    .setSaveConsumer(config::setTooltipEnabledOnlyWhileKeyIsPressed)
+                    .build()
+            );
+
+            general.addEntry(entryBuilder.startBooleanToggle(
                             Text.translatable("config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_full_durability"),
                             config.isTooltipEnabledWhenFull())
                     .setDefaultValue(false)

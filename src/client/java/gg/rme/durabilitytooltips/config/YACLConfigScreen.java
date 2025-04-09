@@ -38,11 +38,19 @@ public class YACLConfigScreen {
                     .controller(TickBoxControllerBuilder::create)
                     .build();
 
+            Option<Boolean> tooltipEnabledOnlyWhileKeyIsPressed = Option.<Boolean>createBuilder()
+                    .name(Text.translatable("config.rmes-durability-tooltips.general.tooltips_enabled_only_while_key_is_pressed"))
+                    .description(OptionDescription.of(Text.translatable("config.rmes-durability-tooltips.general.tooltips_enabled_only_while_key_is_pressed.desc")))
+                    .binding(false, config::isTooltipEnabledOnlyWhileKeyIsPressed, config::setTooltipEnabledOnlyWhileKeyIsPressed)
+                    .controller(TickBoxControllerBuilder::create)
+                    .build();
+
             Option<Boolean> tooltipEnabledWhenFull = Option.<Boolean>createBuilder()
                     .name(Text.translatable("config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_full_durability"))
                     .description(OptionDescription.of(Text.translatable("config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_full_durability.desc")))
                     .binding(false, config::isTooltipEnabledWhenFull, config::setTooltipEnabledWhenFull)
                     .controller(TickBoxControllerBuilder::create)
+                    .available(!config.isTooltipEnabledOnlyWhileKeyIsPressed())
                     .build();
 
             Option<Boolean> tooltipEnabledWhenEmpty = Option.<Boolean>createBuilder()
@@ -50,7 +58,15 @@ public class YACLConfigScreen {
                     .description(OptionDescription.of(Text.translatable("config.rmes-durability-tooltips.general.enable_tooltip_when_item_has_no_durability.desc")))
                     .binding(false, config::isTooltipEnabledWhenEmpty, config::setTooltipEnabledWhenEmpty)
                     .controller(TickBoxControllerBuilder::create)
+                    .available(!config.isTooltipEnabledOnlyWhileKeyIsPressed())
                     .build();
+
+            tooltipEnabledOnlyWhileKeyIsPressed.addEventListener(((option, event) -> {
+                tooltipEnabledWhenFull.applyValue();
+                tooltipEnabledWhenFull.setAvailable(!option.pendingValue());
+                tooltipEnabledWhenEmpty.applyValue();
+                tooltipEnabledWhenEmpty.setAvailable(!option.pendingValue());
+            }));
 
             Option<String> tooltipSeparator = Option.<String>createBuilder()
                     .name(Text.translatable("config.rmes-durability-tooltips.general.tooltip_separator"))
@@ -132,6 +148,7 @@ public class YACLConfigScreen {
                             .group(OptionGroup.createBuilder()
                                     .name(Text.translatable("config.rmes-durability-tooltips.general"))
                                     .option(tooltipsEnabled)
+                                    .option(tooltipEnabledOnlyWhileKeyIsPressed)
                                     .option(tooltipEnabledWhenFull)
                                     .option(tooltipEnabledWhenEmpty)
                                     .option(tooltipSeparator)
