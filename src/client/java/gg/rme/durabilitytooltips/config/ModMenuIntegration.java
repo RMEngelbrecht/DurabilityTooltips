@@ -7,6 +7,7 @@ import net.minecraft.MinecraftVersion;
 import net.minecraft.text.Text;
 
 import java.util.Objects;
+import java.util.Set;
 
 public class ModMenuIntegration implements ModMenuApi {
 
@@ -17,10 +18,11 @@ public class ModMenuIntegration implements ModMenuApi {
             } else if (FabricLoader.getInstance().isModLoaded("cloth-config")) {
                 return new ClothConfigScreen().create();
             }
-        if (!Objects.equals(MinecraftVersion.CURRENT.getName(), "1.21.6")) {
-            return parent -> new InformationScreen(parent, Text.translatable("title.rmes-durability-tooltips.config"));
+            Set<String> unsupportedVersions = Set.of("1.21.6", "1.21.7", "1.21.8");
+        if (unsupportedVersions.contains(MinecraftVersion.CURRENT.getName())) {
+            return null;
         }
-        return null;
+        return parent -> new InformationScreen(parent, Text.translatable("title.rmes-durability-tooltips.config"));
     }
 
 }
