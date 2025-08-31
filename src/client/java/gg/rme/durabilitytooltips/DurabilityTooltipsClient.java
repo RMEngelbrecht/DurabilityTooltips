@@ -41,7 +41,7 @@ public class DurabilityTooltipsClient implements ClientModInitializer {
                 if (!config.isTooltipEnabledOnlyWhileKeyIsPressed()) {
                     if (stack.getMaxDamage() > 0
                             || (config.isTooltipEnabledWhenEmpty() && stack.getMaxDamage() - stack.getDamage() > 0)
-                            || (config.isTooltipEnabledWhenFull() && !stack.isDamaged())) {
+                            || (config.isTooltipEnabledWhenFull() && stack.getMaxDamage() > 0)) {
                         lines.add(Text.empty());
                         lines.add(TooltipHandler.getTooltip(stack));
                     }
