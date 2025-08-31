@@ -6,7 +6,6 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.MinecraftVersion;
 import net.minecraft.text.Text;
 
-import java.util.Objects;
 import java.util.Set;
 
 public class ModMenuIntegration implements ModMenuApi {
